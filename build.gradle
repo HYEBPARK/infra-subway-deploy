@@ -41,6 +41,12 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 }
 
+task copyGitSubmodule(type: Copy) {
+	from './config'
+	include '*.yml'
+	into './src/main/resources'
+}
+
 test {
 	useJUnitPlatform()
 }
